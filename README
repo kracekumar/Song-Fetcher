@@ -1,0 +1,14 @@
+This song fetcher is designed to read the entire URI and fetch href value in<a> tag that end with .mp3 ,It will work for mp3.tamilwire.com
+E.G:http://mp3.tamilwire.com/yuvanshankar-raja-hits-1-66-tamil.html
+It will read the entire page and fetch songs path and in my script i have used a os.chdir("songs") i don't want to pollute current directory so i have created a new directory named songs and i dump all the songs into it. . .
+
+
+Happy Hacking
+
+
+License:
+Use whatever way you want
+
+
+AUthor:
+Kracekumar => kracethekingmaker@gmail.com

@@ -19,9 +19,9 @@ url=URLLister()
 url.feed(source)
 content.close()
 url.close()
-os.chdir("songs")
 dir_content=[]
 dir_content=os.listdir("songs")
+os.chdir("songs")
 y=[x for x in url.urls if x.endswith(".mp3")]
 for all in y:
 	if all not in dir_content:

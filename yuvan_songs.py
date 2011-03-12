@@ -24,10 +24,11 @@ dir_content=os.listdir("songs")
 os.chdir("songs")
 y=[x for x in url.urls if x.endswith(".mp3")]
 for all in y:
-	if all not in dir_content:
+	name=all.rsplit('/')[-1]
+	if not  dir_content.__contains__(name):
 		print "-"*50+"\n"+all+"is downloading"
 		file=urllib2.urlopen(all).readlines()
-		writing=open(all.rsplit('/')[-1],"w")
+		writing=open(name,"w")
 		writing.writelines(file)
 		writing.close()
 		dir_content.append(all)

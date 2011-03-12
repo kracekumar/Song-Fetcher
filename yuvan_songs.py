@@ -20,10 +20,16 @@ url.feed(source)
 content.close()
 url.close()
 os.chdir("songs")
+dir_content=[]
+dir_content=os.listdir("songs")
 y=[x for x in url.urls if x.endswith(".mp3")]
 for all in y:
-	file=urllib2.urlopen(all).readlines()
-	writing=open(all.rsplit('/')[-1],"w")
-	writing.writelines(file)
-	writing.close()
+	if all not in dir_content:
+		print "-"*50+"\n"+all+"is downloading"
+		file=urllib2.urlopen(all).readlines()
+		writing=open(all.rsplit('/')[-1],"w")
+		writing.writelines(file)
+		writing.close()
+		dir_content.append(all)
+		print "\n "+all+"Downloaded"
 #os.system("wget '%s'"%(y[0]))

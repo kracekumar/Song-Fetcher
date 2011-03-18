@@ -39,4 +39,4 @@ for all in y:
 		close_time=time.time()
 		writing.close()
 		dir_content.append(all)
-		print "\n "+name+" took "+str((read_end_time -read_start_time)/60.0)+" minutes to read "+str((close_time - read_end_time)/60.0) +" minutes and to write to directory => "+dir_name
+		print "\n "+name+" took "+str((read_end_time -read_start_time)/60.0)+" minutes to read "+str((close_time - read_end_time)/60.0) +" and minutes  to write to directory => "+dir_name
